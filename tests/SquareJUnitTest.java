@@ -20,6 +20,7 @@ public class SquareJUnitTest implements ShapeTest {
     @Override
     @Test
     public void testSquare() {
+        // Made this task wrong
         assertEquals(square.square(), 9.0);
     }
 
