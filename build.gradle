@@ -17,6 +17,11 @@ repositories {
     mavenCentral()
 }
 
+dependencies {
+    testImplementation "org.junit.jupiter:junit-jupiter-api:5.4.2"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:5.4.2"
+}
+
 sourceSets {
    main.java.srcDir "src"
    test.java.srcDir "tests"
@@ -24,9 +29,4 @@ sourceSets {
 
 test {
     useJUnitPlatform()
-}
-
-dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.5.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
 }
