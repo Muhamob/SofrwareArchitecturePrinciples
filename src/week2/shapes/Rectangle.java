@@ -1,9 +1,25 @@
 package week2.shapes;
 
 public class Rectangle extends Shape {
-    private float x, y, width, height;
+    private double x, y, width, height;
 
-    public Rectangle(float x, float y, float width, float height) {
+    @Override
+    public void move(double dx, double dy) {
+        this.x += dx;
+        this.y += dy;
+    }
+
+    @Override
+    public double square() {
+        return this.width*this.height;
+    }
+
+    @Override
+    public double perimeter() {
+        return 2*(this.width+this.height);
+    }
+
+    public Rectangle(double x, double y, double width, double height) {
         // float x, y are coordinates of top left corner if width and height are positive
         this.x = x;
         this.y = y;
@@ -11,25 +27,19 @@ public class Rectangle extends Shape {
         this.height = height;
     }
 
-    @Override
-    public void move(float dx, float dy) {
-        this.x += dx;
-        this.y += dy;
-    }
-
-    public float getX() {
+    public double getX() {
         return x;
     }
 
-    public float getY() {
+    public double getY() {
         return y;
     }
 
-    public float getWidth() {
+    public double getWidth() {
         return width;
     }
 
-    public float getHeight() {
+    public double getHeight() {
         return height;
     }
 }
